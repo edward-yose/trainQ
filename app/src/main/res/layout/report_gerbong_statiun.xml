@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_main_non_picture" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_light_background"
+        android:layout_gravity="center">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/keret"
+            android:layout_marginTop="200dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:text="1"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="210dp"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:text="Choose Your Gerbong"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="#292929">
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/plusminus"
+            android:layout_marginTop="450dp">
+        </ImageView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#097cfc"
+            android:layout_marginHorizontal="80dp"
+            android:text="Submit"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true">
+        </Button>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="325dp"
+            android:layout_marginLeft="40dp"
+            android:background="#4cd964"
+            android:text="Empty"
+            android:textColor="#ffffff">
+        </Button>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="325dp"
+            android:layout_marginLeft="220dp"
+            android:background="#ffcc00"
+            android:text="Okay"
+            android:textColor="#ffffff">
+        </Button>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="375dp"
+            android:layout_marginLeft="40dp"
+            android:background="#ff9500"
+            android:text="Full"
+            android:textColor="#ffffff">
+        </Button>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="375dp"
+            android:layout_marginLeft="220dp"
+            android:background="#ff3b30"
+            android:text="Very Full"
+            android:textColor="#ffffff">
+        </Button>
+        <!--            coba cari tau gimana cara fix positionnya-->
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

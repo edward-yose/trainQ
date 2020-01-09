@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#d3d3d3"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="330dp"
+    android:layout_margin="0dp"
+    android:layout_alignParentBottom="true">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="330dp"
+        android:src="@drawable/mainscreen"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Station"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300px"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"/>
+
+    <SearchView
+        android:layout_width="375dp"
+        android:layout_height="70dp"
+        android:background="@android:color/darker_gray"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintVertical_bias="0.375" />
+</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favorite"
+        android:layout_marginLeft="10px"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="341dp"/>
+
+</LinearLayout>
