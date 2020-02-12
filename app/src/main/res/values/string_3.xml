@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android</string>
+    <string-array name="gerbong_kereta">
+        <item>Gerbong 1</item>
+        <item>Gerbong 2</item>
+        <item>Gerbong 3</item>
+        <item>Gerbong 4</item>
+        <item>Gerbong 5</item>
+    </string-array>
+
+</resources>

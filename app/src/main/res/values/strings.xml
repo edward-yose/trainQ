@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Android</string>
+    <string-array name="daerah_daerah">
+        <item>Tanah Abang</item>
+        <item>Cilebut</item>
+        <item>Bojonggede</item>
+        <item>Citayam</item>
+        <item>Depok</item>
+        <item>Depok Baru</item>
+        <item>Pondok Cina</item>
+        <item>Universitas Indonesia</item>
+        <item>Universitas Pancasila</item>
+        <item>Lenteng Agung</item>
+        <item>Tanjung Barat</item>
+        <item>Pasar Minggu</item>
+        <item>Pasar Minggu Baru</item>
+    </string-array>
+
 </resources>
