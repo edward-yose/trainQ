@@ -1,20 +1,16 @@
 package com.example.android;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-
-public class SearchClicked extends AppCompatActivity implements AdapterView.OnItemClickListener{
-    ListView listView;
+public class SearchClicked extends AppCompatActivity {
+    RecyclerView Viewer;
     ArrayAdapter<CharSequence> adapter;
 
     @Override
@@ -22,11 +18,15 @@ public class SearchClicked extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = (ListView)findViewById(R.id.daerahindonesia);
+        Viewer = (RecyclerView)findViewById(R.id.daerahindonesia);
         adapter = ArrayAdapter.createFromResource(this,R.array.daerah_daerah,android.R.layout.simple_expandable_list_item_1);
-//        adapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(this);
+//        Viewer.setAdapter(adapter);
+        Viewer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplication(), SelectionStation.class));
+            }
+        });
     }
 
 //    @Override
@@ -35,11 +35,8 @@ public class SearchClicked extends AppCompatActivity implements AdapterView.OnIt
 //        getMenuInflater().inflate(R.menu.list, menu);
 //        return true;
 //    }
-
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this, adapter.getItem(position), Toast.LENGTH_SHORT).show();
-
-    }
+//    @Override
+//    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//        Toast.makeText(this, adapter.getItem(position), Toast.LENGTH_SHORT).show();
+//    }
 }

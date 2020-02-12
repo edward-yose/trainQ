@@ -29,7 +29,7 @@
         android:textColor="#ffffff"
         android:textStyle="bold"/>
 
-    <SearchView
+    <Button
         android:layout_width="375dp"
         android:layout_height="70dp"
         android:id="@+id/activity_main_search_clicked"
@@ -37,7 +37,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="25dp"
         android:layout_centerHorizontal="true"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.375"
+    />
 </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"

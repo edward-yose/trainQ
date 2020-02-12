@@ -15,5 +15,19 @@
         <item>Pasar Minggu</item>
         <item>Pasar Minggu Baru</item>
     </string-array>
+    <string-array name="jam_jam">
+        <item>Kereta A</item>
+        <item>Kereta B</item>
+        <item>Kereta C</item>
+        <item>Kereta D</item>
+        <item>Kereta E</item>
+    </string-array>
+    <string-array name="gerbong_kereta">
+        <item>Gerbong 1</item>
+        <item>Gerbong 2</item>
+        <item>Gerbong 3</item>
+        <item>Gerbong 4</item>
+        <item>Gerbong 5</item>
+    </string-array>
 
 </resources>

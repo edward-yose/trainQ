@@ -25,7 +25,8 @@
             android:layout_alignParentRight="true"
             android:text="TIME ARRIVAL"/>
     </RelativeLayout>
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pilih_kereta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>

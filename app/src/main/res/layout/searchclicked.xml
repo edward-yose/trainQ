@@ -16,11 +16,12 @@
     <SearchView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/daerahindonesia"
         />
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/daerahindonesia"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="app.com.example.android.examplelistview.SeacrchClicked"/>
+        tools:context="app.com.example.android.examplelistview.SeacrchClicked"
+        />
 
 </LinearLayout>

@@ -7,15 +7,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SelectionStation extends AppCompatActivity {
-    ListView jam_keberangkatan;
+    RecyclerView jam_keberangkatan;
     ArrayAdapter<CharSequence> adapter;
     @Override
     protected void onCreate(Bundle SavedInstanceStates){
         super.onCreate(SavedInstanceStates);
         setContentView(R.layout.selection_station);
-        jam_keberangkatan = (ListView)findViewById(R.id.jam_kereta);
+        jam_keberangkatan = (RecyclerView) findViewById(R.id.pilih_kereta);
         adapter = ArrayAdapter.createFromResource(this,R.array.jam_jam, android.R.layout.simple_expandable_list_item_2);
 
         jam_keberangkatan.setOnClickListener(new View.OnClickListener(){
