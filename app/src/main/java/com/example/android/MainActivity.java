@@ -9,15 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
-    private Button search_click;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        search_click = (Button) findViewById(R.id.activity_main_search_clicked);
-
-        search_click.setOnClickListener(new View.OnClickListener() {
+        button = (Button) findViewById(R.id.activity_main_search_clicked);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 nextActivity();
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void nextActivity() {
-        Intent intent = new Intent(this, SplashScreen.class);
+        Intent intent = new Intent(this, SearchClicked.class);
         startActivity(intent);
     }
 }

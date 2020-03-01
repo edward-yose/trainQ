@@ -1,42 +1,43 @@
 package com.example.android;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class SearchClicked extends AppCompatActivity {
-    RecyclerView Viewer;
-    ArrayAdapter<CharSequence> adapter;
+    RecyclerView mRecyclerView;
+    RecyclerView.Adapter mAdapter;
+    RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.searchclicked);
+        mRecyclerView =  findViewById(R.id.daerahindonesia);
 
-        Viewer = (RecyclerView)findViewById(R.id.daerahindonesia);
-        adapter = ArrayAdapter.createFromResource(this,R.array.daerah_daerah,android.R.layout.simple_expandable_list_item_1);
-//        Viewer.setAdapter(adapter);
-        Viewer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplication(), SelectionStation.class));
-            }
-        });
+        ArrayList<ListsOfSearchClicked> exampleList = new ArrayList<>();
+        exampleList.add(new ListsOfSearchClicked("Tanah Abang", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Cilebut", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Bojonggede", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Citayam", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Depok", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Depok Baru", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Pondok Cina", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Universitas Indonesia", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Universitas Pancasila", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Lenteng Agung", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Tanjung Barat", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Pasar Minggu", "Station"));
+        exampleList.add(new ListsOfSearchClicked("Pasar Minggu Bulan", "Station"));
+
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mAdapter = new ExampleAdapter(exampleList);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.list, menu);
-//        return true;
-//    }
-//    @Override
-//    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//        Toast.makeText(this, adapter.getItem(position), Toast.LENGTH_SHORT).show();
-//    }
 }
